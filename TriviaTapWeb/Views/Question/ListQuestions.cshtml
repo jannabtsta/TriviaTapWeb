@@ -1,0 +1,41 @@
+﻿@model TriviaTapWeb.Models.Quiz
+@{
+    ViewData["Title"] = "List of Questions";
+}
+
+<h2>Quiz: @Model.Title</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var question in Model.Questions)
+        {
+            <tr>
+                <td>
+                    @question.QuestionName
+                </td>
+                <td>
+                    <ul>
+                        @foreach (var option in question.Options)
+                        {
+                            <li>
+                                @option.Options
+                                @if (option.IsCorrect)
+                                {
+                                    <strong>(Correct)</strong>
+                                }
+                            </li>
+                        }
+                    </ul>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Quiz" asp-action="IndexAsAdmin" class="btn btn-primary">Back to Quiz List</a>

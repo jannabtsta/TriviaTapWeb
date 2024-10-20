@@ -1,0 +1,9 @@
+﻿@model TriviaTapWeb.Models.Quiz
+
+<div class="question-container">
+<h2>Quiz Completed: @Model.Title</h2>
+
+<p>Your Score: @ViewBag.Score out of @Model.Questions.Count</p>
+</div>
+ 
+<a asp-controller="Quiz" asp-action="Index" class="btn btn-primary">Back to Quiz Categories</a>

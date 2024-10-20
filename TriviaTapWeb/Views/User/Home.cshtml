@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Welcome to TriviaTap!";
+}
+
+<!-- Header Section -->
+<header class="homepage-header">
+    <h1>Welcome to TriviaTap!</h1>
+    <h3 >Join us to test your knowledge and have fun!</h3>
+    <div class="button-container">
+        <a class="auth-button" asp-area="" asp-controller="User" asp-action="Login">Log In</a>
+        <a class="auth-button" asp-area="" asp-controller="User" asp-action="Register">Sign Up</a>
+
+    </div>
+  
+        <a class="styled-button"  href="@Url.Action("Index", "Joke")">Want to smile a little? Click this for a Random Joke!</a>
+   
+</header>
+
+<!-- Footer Section -->
+<footer class="homepage-footer">
+    <p>&copy; 2024 TriviaTap. All rights reserved.</p>
+</footer>

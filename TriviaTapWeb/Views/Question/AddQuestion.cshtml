@@ -1,0 +1,36 @@
+﻿@model TriviaTapWeb.Models.Question
+
+<h2>Add Question</h2>
+
+<form asp-action="AddQuestion" method="post">
+    <input type="hidden" name="QuizID" value="@ViewBag.QuizID" /> <!-- Make sure this is QuizID -->
+
+    <div>
+        <label for="QuestionName">Question:</label>
+        <input type="text" name="questionName" id="QuestionName" required />
+    </div>
+
+    <h3>Options:</h3>
+
+    <div>
+        <label>Option 1:</label>
+        <input type="text" name="options[0]" required />
+        <input type="radio" name="correctOptionIndex" value="0" required /> Is Correct?
+    </div>
+
+    <div>
+        <label>Option 2:</label>
+        <input type="text" name="options[1]" required />
+        <input type="radio" name="correctOptionIndex" value="1" /> Is Correct?
+    </div>
+
+    <div>
+        <label>Option 3:</label>
+        <input type="text" name="options[2]" required />
+        <input type="radio" name="correctOptionIndex" value="2" /> Is Correct?
+    </div>
+
+   
+    <button type="submit">Add Question</button>
+</form>
+<a asp-controller="Quiz" asp-action="IndexAsAdmin" class="btn btn-primary">Back to Quiz List</a>

@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Quiz Home Page";
+}
+
+<h1>Welcome to TriviaTap!</h1>
+<h3> Categories: </h3>
+
+<nav class="category-nav">
+    <ul>
+
+        <li>
+            <div style="text-align: center;">
+            <a asp-area="" asp-controller="Quiz" asp-action="History">
+                <img src="~/images/historylogo.png" alt="TriviaTap Quiz" style="width: 200px; height: auto; border-radius: 15px;" />
+            </a>
+       
+        <a class="styled-button"  asp-area="" asp-controller="Question" asp-action="ListQuestions" asp-route-QuizID="1">
+            View List of Questions
+        </a>
+
+                <form>
+                    <a class="styled-button" asp-area="" asp-controller="Question" asp-action="AddQuestion" asp-route-QuizID="1">
+                        Add Question to History Quiz
+                    </a>
+                </form>
+
+
+     </div>   </li>
+
+        <li>
+            <div style="text-align: center;">
+            <a asp-area="" asp-controller="Quiz" asp-action="Science">
+                <img src="~/images/sciencelogo.png" alt="TriviaTap Quiz" style="width: 200px; height: auto; border-radius: 15px;" />
+            </a>
+       
+        <a class="styled-button" asp-area="" asp-controller="Question" asp-action="ListQuestions" asp-route-QuizID="2">
+            View List of Questions
+        </a>
+
+                <form>
+                    <a class="styled-button" asp-area="" asp-controller="Question" asp-action="AddQuestion" asp-route-QuizID="2">
+                        Add Question to Science Quiz
+                    </a>
+                </form>
+
+        </li> </div>
+
+        <li>
+            <div style="text-align: center;">
+            <a asp-area="" asp-controller="Quiz" asp-action="Trivia">
+                <img src="~/images/trivialogo.png" alt="TriviaTap Quiz" style="width: 200px; height: auto; border-radius: 15px;" />
+            </a>
+       
+        <a class="styled-button"  asp-area="" asp-controller="Question" asp-action="ListQuestions" asp-route-QuizID="3">
+            View List of Questions
+                </a>
+
+                <form>
+                    <a class="styled-button" asp-area="" asp-controller="Question" asp-action="AddQuestion" asp-route-QuizID="3">
+                        Add Question to Trivia Quiz
+                    </a>
+                </form>
+        </li> </div>
+
+    </ul>
+</nav>
+
+

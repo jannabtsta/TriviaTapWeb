@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Quiz Home Page";
+}
+
+<h1>Welcome to TriviaTap!</h1>
+<h3> Categories: Try these quizzes now! </h3>
+
+<nav class="category-nav">
+    <ul>
+        <li><a asp-area="" asp-controller="Quiz" asp-action="History">
+                <img src="~/images/historylogo.png" alt="TriviaTap Quiz" style="width: 200px; height: auto; border-radius: 15px;" />
+            </a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Quiz" asp-action="Science" asp-route-quizID="1">
+                <img src="~/images/sciencelogo.png" alt="TriviaTap Quiz" style="width: 200px; height: auto; border-radius: 15px;" />
+            </a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Quiz" asp-action="History">
+                <img src="~/images/trivialogo.png" alt="TriviaTap Quiz" style="width: 200px; height: auto; border-radius: 15px;" />
+            </a>
+        </li>
+    </ul>
+</nav>
+

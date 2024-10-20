@@ -1,0 +1,26 @@
+﻿@model TriviaTapWeb.Models.Question
+
+<h2 class="quiz-title">Science Quiz</h2>
+<p class="question-status">Question @(ViewBag.QuestionIndex + 1) of @ViewBag.TotalQuestions</p>
+
+<form asp-action="SubmitQuiz" method="post" class="quiz-form">
+    <input type="hidden" name="quizId" value="@ViewBag.QuizId" /> <!-- QuizID is passed here -->
+    <input type="hidden" name="questionId" value="@Model.QuestionID" />
+    <input type="hidden" name="questionIndex" value="@ViewBag.QuestionIndex" />
+
+    <div class="question-container">
+        <h4 class="question-text">@Model.QuestionName</h4>
+
+        @foreach (var option in Model.Options)
+        {
+            <div class="option">
+                <input type="radio" name="selectedOptionId" value="@option.OptionID" required />
+                <label>@option.Options</label>
+            </div>
+        }
+    </div>
+
+    <button type="submit" class="next-button">Next</button>
+</form>
+
+

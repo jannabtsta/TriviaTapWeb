@@ -1,0 +1,20 @@
+﻿@model TriviaTapWeb.Models.JokeResponse
+
+<h3>Here's a Random Joke for you!</h3>
+
+@if (Model != null)
+{
+    if (!string.IsNullOrEmpty(Model.Setup))
+    {
+        <h4>@Model.Setup</h4>
+        <h4>@Model.Delivery</h4>
+    }
+    else
+    {
+        <h4>@Model.Joke</h4>
+    }
+}
+else
+{
+    <p>No joke available at the moment.</p>
+}
